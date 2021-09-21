@@ -68,16 +68,10 @@ public class EmployeePayrollService {
 	  {
 	      new EmployeePayrollFileIOService().printData();
 	  }
-
-	public static void main(String[] args) 
-	{
-		ArrayList<EmployeePayrollData> employeePayrollList = new ArrayList<>();
-		EmployeePayrollService employeePayrollService = new EmployeePayrollService(employeePayrollList);
-		Scanner consoleInputReader = new Scanner(System.in);
-		employeePayrollService.readEmployeePayrollData(consoleInputReader);
-		employeePayrollService.writeEmployeePayrollData(IOService.FILE_IO);
-		employeePayrollService.printData();
-		System.out.println("The number of entries in the file are: " + employeePayrollService.countEntries(IOService.FILE_IO));
-		consoleInputReader.close();
-	}
+	
+	 public long readEmployeePayrollData()
+	 {
+	    this.employeePayrollList=new EmployeePayrollFileIOService().readData();
+	    return this.employeePayrollList.size();
+	 }
 }

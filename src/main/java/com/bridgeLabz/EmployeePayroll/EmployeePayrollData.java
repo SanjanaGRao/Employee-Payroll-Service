@@ -24,6 +24,6 @@ public class EmployeePayrollData
 	//Display method
 	public String toString()
 	{
-		return "Id = "+ id +", Name = "+ name +", Salary = Rs. "+salary;
+		return id+","+name+","+salary;
 	}
 }
