@@ -63,6 +63,11 @@ public class EmployeePayrollService {
 	{  
         return new EmployeePayrollFileIOService().countEntries();
     }
+	
+	 public void printData()
+	  {
+	      new EmployeePayrollFileIOService().printData();
+	  }
 
 	public static void main(String[] args) 
 	{
@@ -71,6 +76,7 @@ public class EmployeePayrollService {
 		Scanner consoleInputReader = new Scanner(System.in);
 		employeePayrollService.readEmployeePayrollData(consoleInputReader);
 		employeePayrollService.writeEmployeePayrollData(IOService.FILE_IO);
+		employeePayrollService.printData();
 		consoleInputReader.close();
 	}
 }
