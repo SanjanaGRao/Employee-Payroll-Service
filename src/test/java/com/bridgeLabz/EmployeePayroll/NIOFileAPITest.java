@@ -3,7 +3,9 @@ package com.bridgeLabz.EmployeePayroll;
 import java.io.*;
 import java.nio.file.*;
 import java.util.stream.*;
+import java.util.*;
 import org.junit.*;
+//For UC3 - import static java.nio.file.StandardWatchEventKinds.*;
 
 
 public class NIOFileAPITest 
@@ -20,7 +22,8 @@ public class NIOFileAPITest
 	
 		//Delete File and check file not exists
 		Path playPath = Paths.get(HOME + "/" + PLAY_WITH_NIO);
-		if(Files.exists(playPath)) FileUtils.deleteFiles(playPath.toFile());
+		if(Files.exists(playPath)) 
+			FileUtils.deleteFiles(playPath.toFile());
 		Assert.assertTrue(Files.notExists(playPath));
 		
 		//Create Directory
