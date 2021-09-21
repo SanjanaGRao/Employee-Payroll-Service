@@ -77,6 +77,7 @@ public class EmployeePayrollService {
 		employeePayrollService.readEmployeePayrollData(consoleInputReader);
 		employeePayrollService.writeEmployeePayrollData(IOService.FILE_IO);
 		employeePayrollService.printData();
+		System.out.println("The number of entries in the file are: " + employeePayrollService.countEntries(IOService.FILE_IO));
 		consoleInputReader.close();
 	}
 }
